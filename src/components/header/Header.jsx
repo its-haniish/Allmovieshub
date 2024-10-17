@@ -72,7 +72,7 @@ const Header = () => {
 
     return (
         <>
-            <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
+            <header className={`header ${mobileMenu ? "mobileView" : ""} ${show} fixed top-0`}>
                 <ContentWrapper>
                     <div className="logo" onClick={() => navigate("/")}>
                         <img src={logo} alt="" />
@@ -124,6 +124,9 @@ const Header = () => {
 
             </header>
             <div id="container-a224aeb344eece72bf0ce9ab1fa2fe53"></div>
+
+
+
 
         </>
     );
