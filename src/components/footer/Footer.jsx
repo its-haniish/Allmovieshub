@@ -23,12 +23,7 @@ const Footer = () => {
                     <li className="menuItem">FAQ</li>
                 </ul>
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    AllMoviesHub – 300mb Movies, 480p Movies, 720p Movies, Hindi Dubbed Series, 1080p Movies, Tv series download, Hubflix, Hubflixhd, Thehubflix, Hdmovieshub, Hdmovieshub.in, Hdmovieshub 300mb, Allmovieshub.
                 </div>
                 <div className="socialIcons">
                     <span className="icon">
