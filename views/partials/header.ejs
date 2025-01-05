@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="image_container">
+        <img src="/images/horizontal_logo.jpg" alt="logo" />
+      </div>
+
+    <nav id="pc_nav">
+
+      <% const links = ["HOME", "BOLLYWOOD MOVIES", "HOLLYWOOD HINDI MOVIES",
+      "SOUTH HINDI MOVIES", "WEB SERIES"]; %> <% links.forEach((link) => { %>
+      <a  href="/<%= link %>"><%= link %></a>
+      <% }); %>
+
+      <div id="nav_search_container">
+        <input type="text" placeholder="Search..." id="nav_search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+
+    </nav>
+
+    <nav id="mobile_nav">
+    <button onclick="showAsideMenu()">
+    <i class="fa-solid fa-bars"></i>
+    </button>
+        <img src="/images/horizontal_logo.jpg" alt="logo" />
+    <button onclick="toggleSearch()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    </nav>
+
+    <div id="mobile_nav_search_container">
+      <input type="text" placeholder="Search..." id="mobile_nav_search" />
+      <button>
+      Search
+      </button>
+    </div>
+    
+<div id="header_links_top">
+  <% 
+  const links2 = [
+    { name: "DUAL AUDIO CONTENT", icon: "fa-solid fa-headphones", bg: "64B81E" },
+    { name: "DESI JUNCTION", icon: "fa-solid fa-compass", bg:"EA4330" },
+    { name: "JOIN TELEGRAM", icon: "fa-brands fa-telegram", bg:"229DE0" },
+    { name: "HOW TO DOWNLOAD", icon: "fa-solid fa-download", bg:"DE9924" },
+  ]; 
+  %>
+
+  <% links2.forEach(link => { %>
+    <a style="background-color: #<%= link.bg %>; box-shadow: 0 0 7px 1px #<%= link.bg %>;" href="/<%= link.name %>">
+      <i class="<%= link.icon %>"></i>
+      <%= link.name %>
+    </a>
+  <% }); %>
+</div>  
+
+<div id="header_links_bottom">
+  <% 
+    const links3 = [
+      "480P",
+      "720P",
+      "1080P",
+      "2160P 4K",
+      "NETFLIX",
+      "AMZN PRIME VIDEO",
+      "DISNEY+ HOTSTAR",
+      "SONY LIV",
+      "ZEE5",
+      "JIO CINEMA",
+      "HOICHOI",
+      "ALTBALAJI",
+      "BENGALI",
+      "GUJARATI",
+      "PUNJABI MOVIES",
+      "MARATHI MOVIES",
+      "HINDI DUBBED MOVIES",
+      "HOLLYWOOD HINDI DUBBED",
+      "SOUTH HINDI DUBBED",
+      "BOLLYWOOD MOVIES",
+      "WEB SERIES" 
+    ];
+  %>
+
+  <% links3.forEach(link => { %>
+    <a href="/<%= link %>"><%= link %></a>
+  <% }); %>
+</div>
+
+<input id="header_search" type="text" placeholder="Search Movies or Web-Series here..." />
+
+
+<aside id="side_menu" style="display: none;">
+<div id="side_menu_top">
+  <button id="side_menu_close" onclick="hideAsideMenu()">
+    <i class="fa-solid fa-times"></i>
+  </button>
+</div>
+    <% links.forEach((link) => { %>
+      <a href="/<%= link %>"><%= link %></a>
+    <% }); %>
+
+</aside>
+
+    </header>
+
+  </body>
+</html>

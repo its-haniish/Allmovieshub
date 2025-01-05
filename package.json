@@ -1,0 +1,19 @@
+{
+  "name": "allmovieshub",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Hanish Kumar",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.3",
+    "scss": "^0.2.4"
+  }
+}
