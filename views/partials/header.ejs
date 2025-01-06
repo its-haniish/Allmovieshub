@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,8 +59,7 @@
     </div>
     
 <div id="header_links_top">
-  <% 
-  const links2 = [
+  <% const links2 = [
     { name: "DUAL AUDIO CONTENT", icon: "fa-solid fa-headphones", bg: "64B81E" },
     { name: "DESI JUNCTION", icon: "fa-solid fa-compass", bg:"EA4330" },
     { name: "JOIN TELEGRAM", icon: "fa-brands fa-telegram", bg:"229DE0" },
@@ -119,10 +119,5 @@
     <% links.forEach((link) => { %>
       <a href="/<%= link %>"><%= link %></a>
     <% }); %>
-
 </aside>
-
-    </header>
-
-  </body>
-</html>
+</header>

@@ -1,0 +1,23 @@
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  margin-top: 50px;
+}
+
+footer p span {
+  color: #b3b3b3;
+}
+
+footer p span:hover {
+  text-decoration: underline;
+}
+
+#username {
+  color: greenyellow;
+  font-weight: bold;
+}

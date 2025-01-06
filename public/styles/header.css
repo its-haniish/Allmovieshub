@@ -31,8 +31,9 @@ html {
 
 body {
   width: 73%;
-  height: 100%;
+  height: fit-content;
   background-color: var(--bg);
+  overflow-x: hidden;
 }
 
 #image_container {
@@ -125,12 +126,12 @@ body {
   margin: 5px;
   word-wrap: normal;
   background: #519710;
-  border-radius: 10px;
+  border-radius: 5px;
   width: fit-content;
   text-align: center;
   color: white;
   white-space: nowrap;
-  padding: 10px;
+  padding: 5px 10px;
 }
 
 #header_search {
@@ -169,6 +170,9 @@ aside {
 /* Styles for tablets */
 @media (max-width: 480px) {
   /* Styles for mobile phones */
+  * {
+    font-size: 13px;
+  }
   #header_links_bottom {
     margin-top: 5px;
   }
