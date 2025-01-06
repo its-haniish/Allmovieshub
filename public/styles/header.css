@@ -10,6 +10,7 @@
   font-family: "Poppins", serif;
   box-sizing: border-box;
   font-size: 14px;
+  max-width: 100%;
 }
 a {
   text-decoration: none;
