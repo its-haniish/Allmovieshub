@@ -1,20 +1,10 @@
 <%- include('./partials/header.ejs') %>
 
 <div id="movie_card_container">
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
-<%- include('./partials/movie_card.ejs') %>
+    <% movies.forEach(movie => { %>
+    <%- include('./partials/movie_card.ejs', { movie }) %>
+  <% }) %>
 </div>
-<%- include('./partials/pagination.ejs') %>
-<%- include('./partials/footer.ejs') %>
 
+<%- include('./partials/pagination.ejs', {movies,page}) %> 
+<%- include('./partials/footer.ejs') %>

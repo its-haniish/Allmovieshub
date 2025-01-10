@@ -168,11 +168,25 @@ aside {
   display: hidden;
 }
 
+#msg_para {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0px 20px;
+}
+
 /* Styles for tablets */
 @media (max-width: 480px) {
   /* Styles for mobile phones */
   * {
     font-size: 13px;
+  }
+
+  #msg_para {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0px 10px;
   }
   #header_links_bottom {
     margin-top: 5px;

@@ -1,3 +1,22 @@
 <section id="pagination_wrapper">
-    
+
+  <% if (page === 2) { %>
+    <a href="/?page=<%= page - 1 %>">&#8592; Previous</a>
+    <a href="/?page=<%= page - 1 %>"><%= page - 1 %></a>
+  <% } %>
+
+  <% if (page > 2) { %>
+    <a href="/?page=<%= page - 1 %>">&#8592; Previous</a>
+    <a href="/?page=<%= page - 2 %>"><%= page - 2 %></a>
+    <a href="/?page=<%= page - 1 %>"><%= page - 1 %></a>
+  <% } %>
+
+    <a href="/?page=<%= page %>" class="active"><%= page %></a>
+
+
+  <% if (movies.length === 20) { %>
+    <a href="/?page=<%= page + 1 %>"><%= page + 1 %></a>
+    <a href="/?page=<%= page + 2 %>"><%= page + 2 %></a>
+    <a href="/?page=<%= page + 1 %>">Next &#8594;</a>
+  <% } %>
 </section>
