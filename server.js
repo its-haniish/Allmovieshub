@@ -41,7 +41,7 @@ app.get("/", async (req, res) => {
 
 
 // Start the server
-mongoose.connect(process.env.MONGO_URI).then(() => {
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/movies").then(() => {
     console.log("Connected to the database.");
     app.listen(PORT, () => {
         console.log(`The server is live at: http://localhost:${PORT}`);
