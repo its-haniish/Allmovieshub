@@ -3,12 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title> <%= title %> </title>
+    <meta name="description" content="<%= description %>" />
+    <meta name="keywords" content="<%= keywords %>" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/movie_card.css" />
     <link rel="stylesheet" href="/styles/pagination.css" />
-
+    <link rel="stylesheet" href="/styles/movie.css" />
+    <link rel="favicon" href="/images/favicon.ico" />
+    <link rel="canonical" href="https://allmovieshub.tech/" />
+    <meta property="og:locale" content="en_US en_IN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AllMoviesHub" />
+    <meta property="og:url" content="https://allmovieshub.tech/" />
+    <meta property="og:site_name" content="AllMoviesHub" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,20 +38,20 @@
   </head>
   <body>
     <header>
-      <div id="image_container">
+      <a  href="/" id="image_container">
         <img src="/images/horizontal_logo.jpg" alt="logo" />
-      </div>
+      </a>
 
     <nav id="pc_nav">
 
       <% const links = ["HOME", "BOLLYWOOD MOVIES", "HOLLYWOOD HINDI MOVIES",
       "SOUTH HINDI MOVIES", "WEB SERIES"]; %> <% links.forEach((link) => { %>
-      <a  href="/<%= link %>"><%= link %></a>
+      <a  href="#"><%= link %></a>
       <% }); %>
 
       <div id="nav_search_container">
-        <input type="text" placeholder="Search..." id="nav_search" />
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search_input_1" placeholder="Search..." id="nav_search" />
+        <i id="search_btn_1" class="fa-solid fa-magnifying-glass"></i>
       </div>
 
 
@@ -55,8 +68,8 @@
     </nav>
 
     <div id="mobile_nav_search_container">
-      <input type="text" placeholder="Search..." id="mobile_nav_search"  />
-      <button>
+      <input  id="search_input_2" type="text" placeholder="Search..." id="mobile_nav_search"  />
+      <button id="search_btn_2">
       Search
       </button>
     </div>
@@ -71,7 +84,7 @@
   %>
 
   <% links2.forEach(link => { %>
-    <a style="background-color: #<%= link.bg %>; box-shadow: 0 0 7px 1px #<%= link.bg %>;" href="/<%= link.name %>">
+    <a style="background-color: #<%= link.bg %>; box-shadow: 0 0 7px 1px #<%= link.bg %>;" href="#">
       <i class="<%= link.icon %>"></i>
       <%= link.name %>
     </a>
@@ -106,11 +119,11 @@
   %>
 
   <% links3.forEach(link => { %>
-    <a href="/<%= link %>"><%= link %></a>
+    <a href="/"><%= link %></a>
   <% }); %>
 </div>
 
-<input id="header_search" type="text" placeholder="Search Movies or Web-Series here..." />
+<input id="header_search" type="text" placeholder="Search Movies or Web-Series here..."  />
 
 
 <aside id="side_menu" style="display: none;">
