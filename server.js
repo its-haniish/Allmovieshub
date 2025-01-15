@@ -3,7 +3,7 @@ const express=require("express");
 const path=require("path");
 const app=express();
 const mongoose=require("mongoose");
-const PORT= process.env.PORT || 8080;
+const PORT=process.env.PORT||8080;
 const Posts=require("./models/Posts.js");
 app.use(express.static(path.join(__dirname, 'public/')));
 app.set("view engine", "ejs");
@@ -41,6 +41,75 @@ app.get("/", async (req, res) => {
         res.status(500).send("An error occurred while fetching movies.");
     }
 });
+
+app.get("/bollywood-movies", async (req, res) => {
+    try {
+        const page=parseInt(req.query.page)||1; // Default to page 1
+        const limit=parseInt(req.query.limit)||20; // Default to 20 results per page
+        const skip=(page-1)*limit;
+        const search=req.query.search||""; // Get search query from the request
+
+        // Build the query object for search and category
+        const query={
+            category: "bollywood", // Ensure category is bollywood
+            ...(search&&{ title: { $regex: search, $options: "i" } }) // Case-insensitive partial match for title
+        };
+
+        // Fetch movies based on the query
+        const movies=await Posts.find(query)
+            .sort({ _id: 1 }) // Sort by ascending ID (customize as needed)
+            .skip(skip) // Skip documents for pagination
+            .limit(limit); // Limit the number of results
+
+        // Count total documents matching the query for pagination
+        const totalMovies=await Posts.countDocuments(query);
+        const totalPages=Math.ceil(totalMovies/limit);
+
+        res.render("home.ejs", {
+            movies,
+            page,
+            totalPages,
+        });
+    } catch (error) {
+        console.error("Error fetching movies:", error);
+        res.status(500).send("An error occurred while fetching movies.");
+    }
+});
+
+app.get("/hollywood-hindi-dubbed", async (req, res) => {
+    try {
+        const page=parseInt(req.query.page)||1; // Default to page 1
+        const limit=parseInt(req.query.limit)||20; // Default to 20 results per page
+        const skip=(page-1)*limit;
+        const search=req.query.search||""; // Get search query from the request
+
+        // Build the query object for search and category
+        const query={
+            category: "hollywood-hindi-dubbed", // Ensure category is bollywood
+            ...(search&&{ title: { $regex: search, $options: "i" } }) // Case-insensitive partial match for title
+        };
+
+        // Fetch movies based on the query
+        const movies=await Posts.find(query)
+            .sort({ _id: 1 }) // Sort by ascending ID (customize as needed)
+            .skip(skip) // Skip documents for pagination
+            .limit(limit); // Limit the number of results
+
+        // Count total documents matching the query for pagination
+        const totalMovies=await Posts.countDocuments(query);
+        const totalPages=Math.ceil(totalMovies/limit);
+
+        res.render("home.ejs", {
+            movies,
+            page,
+            totalPages,
+        });
+    } catch (error) {
+        console.error("Error fetching movies:", error);
+        res.status(500).send("An error occurred while fetching movies.");
+    }
+});
+
 
 
 app.get("/:slug", async (req, res) => {

@@ -39,14 +39,36 @@
   <body>
     <header>
       <a  href="/" id="image_container">
-        <img src="/images/horizontal_logo.jpg" alt="logo" />
+      <img src="/images/horizontal_logo.jpg" onclick="window.location.href='/'" alt="logo" />
       </a>
 
     <nav id="pc_nav">
 
-      <% const links = ["HOME", "BOLLYWOOD MOVIES", "HOLLYWOOD HINDI MOVIES",
-      "SOUTH HINDI MOVIES", "WEB SERIES"]; %> <% links.forEach((link) => { %>
-      <a  href="#"><%= link %></a>
+      <% const links = [
+        {
+          name: "HOME",
+          url: "/",
+        },
+        {
+          name: "BOLLYWOOD MOVIES",
+          url: "/bollywood-movies",
+        },
+        {
+          name: "HOLLYWOOD HINDI MOVIES",
+          url: "/hollywood-hindi-dubbed",
+        },
+        {
+          name: "SOUTH HINDI MOVIES",
+          url: "/south-hindi-movies",
+        },
+        {
+          name: "WEB SERIES",
+          url: "/web-series",
+        }];
+       %>
+      
+       <% links.forEach((elem) => { %>
+      <a  href="<%= elem.url %>"><%= elem.name %></a>
       <% }); %>
 
       <div id="nav_search_container">
@@ -61,7 +83,7 @@
     <button onclick="showAsideMenu()">
     <i class="fa-solid fa-bars"></i>
     </button>
-        <img src="/images/horizontal_logo.jpg" alt="logo" />
+        <img src="/images/horizontal_logo.jpg" onclick="window.location.href='/'" alt="logo" />
     <button onclick="toggleSearch()">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
@@ -132,8 +154,8 @@
     <i class="fa-solid fa-times"></i>
   </button>
 </div>
-    <% links.forEach((link) => { %>
-      <a href="/<%= link %>"><%= link %></a>
+    <% links.forEach((elem) => { %>
+      <a href="<%= elem.url %>"><%= elem.name %></a>
     <% }); %>
 </aside>
 </header>
