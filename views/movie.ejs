@@ -1,4 +1,12 @@
+
+
 <%- include('./partials/header.ejs', {title: movie.title,keywords: movie.keywords.join(", "),description: movie.metaDesc}) %>
+
+<div>
+<script async="async" data-cfasync="false" src="//offspringthisscarcely.com/a224aeb344eece72bf0ce9ab1fa2fe53/invoke.js"></script>
+<div id="container-a224aeb344eece72bf0ce9ab1fa2fe53"></div>
+</div>
+
 <section id="movie_container">
     <h1 id="movie_heading">
         <%= movie.title %>
@@ -19,6 +27,22 @@
         <span class="orange">start download.</span>
     </p>
     <hr class="movie_hr" />
+   
+    <div>
+    <script type="text/javascript">
+	atOptions = {
+		'key' : 'f4c245f8cf98fae0a3d1cdeb6e640c18',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//offspringthisscarcely.com/f4c245f8cf98fae0a3d1cdeb6e640c18/invoke.js"></script>
+    
+    </div>
+
+
 
     <figure class="featured_image_container"> 
     
@@ -74,6 +98,24 @@
         <%= movie.starCast %>
     </p>
     <hr class="movie_hr" />
+
+<div>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '873d7f0d704aa05bcb1af655be9300da',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//offspringthisscarcely.com/873d7f0d704aa05bcb1af655be9300da/invoke.js"></script>
+
+</div>
+
+
+    <hr class="movie_hr" />
     <h3 class="movie_para orange movie_heading3">Movie-SYNOPSIS/Story</h3>
     <p class="white movie_para">
         <%= movie.synopsis %>
@@ -97,6 +139,18 @@
         File. Please Contact Us if any link is Broken or file is Missing. We
         Will fix it Immediately. </p>
     <hr class="movie_hr" />
+    <div>
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '9d12847802f72d01b0cfbdee18685fa3',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//offspringthisscarcely.com/9d12847802f72d01b0cfbdee18685fa3/invoke.js"></script>
+</div>
     <h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
     <% movie.downloadLinks.forEach((elem) => { %><a
         class="download_link" target="_blank"

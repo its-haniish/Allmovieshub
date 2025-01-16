@@ -21,3 +21,28 @@ footer p span:hover {
   color: greenyellow;
   font-weight: bold;
 }
+
+.left_side_add_container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.right_side_add_container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+@media (max-width: 480px) {
+
+
+  .left_side_add_container{
+    display: none;
+  }
+  
+  .right_side_add_container{
+    display: none;
+  }
+}
