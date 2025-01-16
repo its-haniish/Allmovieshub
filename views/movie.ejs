@@ -1,127 +1,113 @@
-<%- include('./partials/header.ejs', {title: movie.title, keywords:
-movie.keywords.join(", "), description: movie.metaDesc}) %>
-
+<%- include('./partials/header.ejs', {title: movie.title,keywords: movie.keywords.join(", "),description: movie.metaDesc}) %>
 <section id="movie_container">
-  <h1 id="movie_heading"><%= movie.title %></h1>
+    <h1 id="movie_heading">
+        <%= movie.title %>
+    </h1>
+    <hr class="movie_hr" />
+    <p class="white movie_para"> <span class="orange">
+            <%= movie.metaDesc %>
+        </span>. We Provide <span class="aqua">Direct Download Links</span> For
+        Best Qualities And <span class="yellowgreen">Fast Download.</span> You
+        Can Contact us on Telegram For the Latest Updates. AllMoviesHub is the
+        best online platform for downloading <span class="red">
+            <%= movie.title %>
+        </span> and NetFlix Original WEB Series Complete All Episodes Available
+        in <span class="aqua">480p & 720p & 1080p qualities.</span>
+        <%= movie.synopsis %>. We provide direct <span
+            class="yellowgreen">G-Drive download</span> link for fast and secure
+        downloading. Click on the download button below and follow the steps to
+        <span class="orange">start download.</span>
+    </p>
+    <hr class="movie_hr" />
 
-  <hr class="movie_hr" />
-
-  <p class="white movie_para">
-    <span class="orange"><%= movie.metaDesc %></span>. We Provide
-    <span class="aqua">Direct Download Links</span> For Best Qualities And
-    <span class="yellowgreen">Fast Download.</span> You Can Contact us on
-    Telegram For the Latest Updates. AllMoviesHub is the best online platform
-    for downloading <span class="red"><%= movie.title %></span> and NetFlix
-    Original WEB Series Complete All Episodes Available in
-    <span class="aqua">480p & 720p & 1080p qualities.</span> <%= movie.synopsis
-    %>. We provide direct <span class="yellowgreen">G-Drive download</span> link
-    for fast and secure downloading. Click on the download button below and
-    follow the steps to <span class="orange">start download.</span>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <figure class="featured_image_container">
-    <img
-      class="featured_image"
-      src="<%= movie.featuredImage %>"
-      alt="<%= movie.title %>"
-    />
-  </figure>
-  <figcaption>
-    <h2 id="movie_heading2"><%= movie.title %> | Allmovieshub</h2>
-  </figcaption>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">IMDb Rating:</span> <%= movie.imdbRating %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Release Year:</span> <%= movie.releaseYear %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Genres:</span> <%= movie.genres %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Quality:</span> <%= movie.quality %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">File Size:</span> <%= movie.fileSize %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Language:</span> <%= movie.language %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Format :</span> <%= movie.format %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Director :</span> <%= movie.director %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <p class="white info_para">
-    <span class="orange">Star Cast :</span> <%= movie.starCast %>
-  </p>
-
-  <hr class="movie_hr" />
-
-  <h3 class="movie_para orange movie_heading3">Movie-SYNOPSIS/Story</h3>
-  <p class="white movie_para"><%= movie.synopsis %></p>
-
-  <hr class="movie_hr" />
-  <h3 class="orange movie_heading3">Screenshots: "See Before Downloading"</h3>
-  <hr class="movie_hr" />
-  <% if(movie.image !== "No image available"){ %> <img class="white" src="<%=
-  movie.image %>" alt="<%= movie.keywords.join(", ") %>"> <%} else {%>
-
-  <p class="white movie_para">No Image Available</p>
-
-  <% } %>
-
-  <h2 id="movie_heading2"><%= movie.title %> | Allmovieshub</h2>
-
-  <p class="white movie_para">
-    Click on the Above Download Button to Download File. Please Contact Us if
-    any link is Broken or file is Missing. We Will fix it Immediately.
-  </p>
-
-  <hr class="movie_hr" />
-
-  <h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
-
-  <% movie.downloadLinks.forEach((elem) => { %>
-  <a class="download_link" target="_blank" href="<%= elem.link %>"
-    ><%= elem.type %></a
-  >
-  <% }) %>
-  <hr class="movie_hr" />
-  <p class="post_views">
-    <i class="fa-solid fa-signal"></i> Post Views: <%= movie.postViews %>
-  </p>
-  <hr class="movie_hr" />
+    <figure class="featured_image_container"> 
+    
+    <%
+    if(movie.image !== "Image not found.") 
+    { %>
+    <img class="featured_image"
+            src="<%= movie.featuredImage %>"
+            alt="<%= movie.title %>" loading="lazy" /> 
+    <% } %>       
+            
+            
+            </figure>
+    <figcaption>
+        <h2 id="movie_heading2">
+            <%= movie.title %>| Allmovieshub
+        </h2>
+    </figcaption>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">IMDb Rating:</span>
+        <%= movie.imdbRating %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Release Year:</span>
+        <%= movie.releaseYear %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Genres:</span>
+        <%= movie.genres %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Quality:</span>
+        <%= movie.quality %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">File Size:</span>
+        <%= movie.fileSize %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Language:</span>
+        <%= movie.language %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Format :</span>
+        <%= movie.format %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Director :</span>
+        <%= movie.director %>
+    </p>
+    <hr class="movie_hr" />
+    <p class="white info_para"> <span class="orange">Star Cast :</span>
+        <%= movie.starCast %>
+    </p>
+    <hr class="movie_hr" />
+    <h3 class="movie_para orange movie_heading3">Movie-SYNOPSIS/Story</h3>
+    <p class="white movie_para">
+        <%= movie.synopsis %>
+    </p>
+    <hr class="movie_hr" />
+    <h3 class="orange movie_heading3">Screenshots: "See Before Downloading"</h3>
+    <hr class="movie_hr" />
+    <% if (movie.image !== "Image not found.") { %>
+     <img class="white" src="<%= movie.image %>"
+            alt="<%= movie.keywords.join(" , ") %>"
+            loading="lazy">
+        <% } else { %><img class="white"
+            src="<%= movie.featuredImage %>"
+            alt="<%= movie.keywords.join(" , ") %>"
+            loading="lazy">
+    <% } %>
+    <h2 id="movie_heading2">
+        <%= movie.title %>| Allmovieshub
+    </h2>
+    <p class="white movie_para"> Click on the Above Download Button to Download
+        File. Please Contact Us if any link is Broken or file is Missing. We
+        Will fix it Immediately. </p>
+    <hr class="movie_hr" />
+    <h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
+    <% movie.downloadLinks.forEach((elem) => { %><a
+        class="download_link" target="_blank"
+        href="<%= elem.link %>">
+        <%= elem.type %>
+    </a>
+    <% }) %>
+    <hr class="movie_hr" />
+    <p class="post_views"> <i class="fa-solid fa-signal"></i> Post Views:
+        <%= movie.postViews %>
+    </p>
+    <hr class="movie_hr" />
 </section>
-
 <%- include('./partials/footer.ejs') %>
