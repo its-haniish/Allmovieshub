@@ -70,7 +70,8 @@ app.get("/category/:category", async (req, res) => {
             "south-hindi-dubbed", 
             "bollywood-movies", 
             "web-series",
-            "dual-audio-movies"
+            "dual-audio-movies",
+            "netflix"
           ];
           
         if (!allowedCategories.includes(category)) {
