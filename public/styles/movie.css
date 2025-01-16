@@ -129,14 +129,14 @@
   }
 
   #movie_heading {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: white;
     text-align: center;
     width: 100%;
   }
   #movie_container {
-    margin-top: 15px;
+    margin-top: 13px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,7 +146,7 @@
   }
 
   .download_link {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -169,11 +169,11 @@
   .movie_heading3 {
     font-weight: bold;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   #movie_heading2 {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     color: rgb(0, 163, 228);
     text-align: center;

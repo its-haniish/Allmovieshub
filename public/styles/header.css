@@ -179,7 +179,7 @@ aside {
 @media (max-width: 480px) {
   /* Styles for mobile phones */
   * {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   #msg_para {
