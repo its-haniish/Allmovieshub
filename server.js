@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
 
         // Fetch movies based on the query
         const movies=await Posts.find(query)
-            .sort({ _id: 1 }) // Sort by ascending ID (customize as needed)
+            .sort({ uid: -1 }) // Sort by ascending ID (customize as needed)
             .skip(skip) // Skip documents for pagination
             .limit(limit); // Limit the number of results
 
@@ -89,7 +89,7 @@ app.get("/category/:category", async (req, res) => {
 
         // Fetch movies based on the query
         const movies=await Posts.find(query)
-            .sort({ _id: 1 }) // Sort by ascending ID (customize as needed)
+            .sort({ uid: 1 }) // Sort by ascending ID (customize as needed)
             .skip(skip) // Skip documents for pagination
             .limit(limit); // Limit the number of results
 
