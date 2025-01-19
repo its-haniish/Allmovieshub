@@ -1,5 +1,4 @@
 
-
 <%- include('./partials/header.ejs', {title: movie.title,keywords: movie.keywords.join(", "),description: movie.metaDesc}) %>
 
 <div>
@@ -151,13 +150,16 @@
 </script>
 <script type="text/javascript" src="//offspringthisscarcely.com/9d12847802f72d01b0cfbdee18685fa3/invoke.js"></script>
 </div>
-    <h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
-    <% movie.downloadLinks.forEach((elem) => { %><a
-        class="download_link" target="_blank"
-        href="<%= elem.link %>">
-        <%= elem.type %>
-    </a>
-    <% }) %>
+
+<h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
+<% movie.downloadLinks.forEach((elem) => { %>   
+    <% if (elem.type !== ": DOWNLOAD LINKS IN HINDI:") { %>
+        <a class="download_link" target="_blank" href="<%= elem.link %>">
+            <%= elem.type %>
+        </a>
+    <% } %>
+<% }) %>
+
     <hr class="movie_hr" />
     <p class="post_views"> <i class="fa-solid fa-signal"></i> Post Views:
         <%= movie.postViews %>
