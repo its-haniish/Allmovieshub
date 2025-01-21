@@ -1,9 +1,17 @@
+<script>
+  function handleImageError(img) {
+    img.onerror = null; // Prevent infinite loop
+    img.src = '/images/loader.png'; // Adjusted path
+  }
+</script>
+
 <a href="/<%= movie.slug %>" class="movie_card">
   <figure>
     <img
       src="<%= movie.poster %>"
       alt="<%= movie.title %>"
       loading="lazy"
+      onerror="handleImageError(this)"
     />
   </figure>
   <figcaption>
