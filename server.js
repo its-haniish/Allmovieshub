@@ -3,7 +3,7 @@ const express=require("express");
 const path=require("path");
 const app=express();
 const mongoose=require("mongoose");
-const PORT=process.env.PORT||8081;
+const PORT=process.env.PORT||8080;
 const Posts=require("./models/Posts.js");
 const Msgs=require("./models/Msgs.js");
 app.use(express.json());
