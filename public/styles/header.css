@@ -175,6 +175,11 @@ aside {
   padding: 0px 20px;
 }
 
+
+#native_banner_ad{
+  display: block;
+}
+
 /* Styles for tablets */
 @media (max-width: 480px) {
   /* Styles for mobile phones */
