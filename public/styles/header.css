@@ -175,9 +175,15 @@ aside {
   padding: 0px 20px;
 }
 
+.native_banner_ad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 
-#native_banner_ad{
-  display: block;
+.mobile_banner_ad{
+  display: none;
 }
 
 /* Styles for tablets */
@@ -187,9 +193,17 @@ aside {
     font-size: 12px;
   }
 
-  #native_banner_ad{
+  .native_banner_ad{
     display: none;
   }
+
+  .mobile_banner_ad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
 
   #msg_para {
     color: white;
