@@ -1,5 +1,6 @@
 <script>
   function handleImageError(img) {
+    console.error('Image failed to load:', img.src);
     img.onerror = null; // Prevent infinite loop
     img.src = '/images/loader.gif'; // Use a proper fallback image path
   }
