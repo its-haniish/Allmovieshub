@@ -108,7 +108,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 30px 10px;
+  border-radius: 15%;
   padding: 10px 20px;
   color: white;
   font-weight: 500;
@@ -127,7 +127,7 @@ body {
   margin: 5px;
   word-wrap: normal;
   background: #519710;
-  border-radius: 5px;
+  border-radius: 15%;
   width: fit-content;
   text-align: center;
   color: white;
@@ -182,6 +182,10 @@ aside {
     font-size: 12px;
   }
 
+  #native_banner_ad{
+    display: none;
+  }
+
   #msg_para {
     color: white;
     margin-top: 10px;
@@ -203,7 +207,12 @@ aside {
     display: none;
   }
   #header_links_top {
-    display: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   #image_container {
     display: none;
