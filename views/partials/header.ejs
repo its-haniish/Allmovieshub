@@ -9,11 +9,12 @@
     <meta name="description" content="<%= description %>" />
     <meta name="keywords" content="<%= keywords %>" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/movie_card.css" />
     <link rel="stylesheet" href="/styles/pagination.css" />
     <link rel="stylesheet" href="/styles/movie.css" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://allmovieshub.live/" />
     <meta property="og:locale" content="en_US en_IN" />
     <meta property="og:type" content="website" />
@@ -101,10 +102,10 @@
                         link: "/?search=18%2B"
                     },
                     {
-                        name: "JOIN TELEGRAM",
+                        name: "CONTACT ME :)",
                         icon: "fa-brands fa-telegram",
                         bg: "229DE0",
-                        link: "https://offspringthisscarcely.com/f2hzqz837i?key=0c7d11d4e7eb7b38a83d1c36f742341d"
+                        link: "/contact"
                     },
                     {
                         name: "HOW TO DOWNLOAD",
@@ -116,7 +117,7 @@
                     %>
             <% links2.forEach(link => { %><a
                 style="background-color: #<%= link.bg %>; box-shadow: 0 0 7px 1px #<%= link.bg %>;"
-                href="#"> <i class="<%= link.icon %>"></i>
+                href="<%= link.link %>"> <i class="<%= link.icon %>"></i>
                 <%= link.name %>
             </a>
             <% }); %>

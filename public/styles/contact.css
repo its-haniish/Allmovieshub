@@ -1,0 +1,59 @@
+
+
+  #contact_container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  #contact_container h1 {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  #contact_container p {
+    color: #b0b0b0;
+    text-align: center;
+  }
+
+  .form_group {
+    margin-bottom: 15px;
+  }
+
+  #contact_container label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #contact_container input[type="text"],#contact_container  input[type="email"], #contact_container textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 4px;
+  }
+
+  #contact_container input[type="text"]:focus, #contact_container input[type="email"]:focus, #contact_container textarea:focus {
+    border-color: #ff4081;
+    outline: none;
+  }
+
+  #contact_container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #contact_container button:hover {
+    background-color: #e3005f;
+  }

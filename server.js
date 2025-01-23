@@ -5,6 +5,8 @@ const app=express();
 const mongoose=require("mongoose");
 const PORT=process.env.PORT||8080;
 const Posts=require("./models/Posts.js");
+const Msgs=require("./models/Msgs.js");
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public/')));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -41,6 +43,24 @@ app.get("/", async (req, res) => {
         res.status(500).send("An error occurred while fetching movies.");
     }
 });
+
+app.get("/contact", (req, res) => {
+    res.render("contact.ejs");
+});
+
+// Route to handle form submission
+app.post("/contact", async (req, res) => {
+    try {
+        const { name, email, message } = req.body;
+        await Msgs.create({ name, email, message });
+        res.status(201).json({msg:"Message sent successfully."});
+        return;
+    } catch (error) {
+        console.error("Error sending message:", error);
+        res.status(500).json({msg:"Server Internal Error."});
+    }
+
+  });
 
 
 
@@ -126,6 +146,8 @@ app.get("/:slug", async (req, res) => {
         res.status(500).send("An error occurred while fetching the movie."); // Handle server errors
     }
 });
+
+
 
 
 

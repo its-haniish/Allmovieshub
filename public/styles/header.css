@@ -99,8 +99,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 #header_links_top a {
@@ -113,6 +114,7 @@ body {
   color: white;
   font-weight: 500;
   text-shadow: 0 0 2px white;
+  white-space: nowrap;
 }
 
 #header_links_bottom {

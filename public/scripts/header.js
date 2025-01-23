@@ -81,3 +81,31 @@ search_btn_2.addEventListener('click', async () => {
     }
 });
 
+
+const name = document.getElementById("user_name");
+const email = document.getElementById("user_email");
+const message = document.getElementById("user_message");
+
+const saveMessage = async (e) => {
+    e.preventDefault();
+    
+    const data = {
+        name: name.value,
+        email: email.value,
+        message: message.value
+    };
+    const response = await fetch("/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+    const result = await response.json();
+    alert(result.msg);
+    name.value = "";
+    email.value = "";
+    message.value = "";
+}
+
+
