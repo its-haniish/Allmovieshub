@@ -3,7 +3,7 @@ const express=require("express");
 const path=require("path");
 const app=express();
 const mongoose=require("mongoose");
-const PORT=process.env.PORT||8080;
+const PORT=process.env.PORT||8081;
 const Posts=require("./models/Posts.js");
 const Msgs=require("./models/Msgs.js");
 app.use(express.json());
@@ -95,7 +95,6 @@ app.get("/category/:category", async (req, res) => {
           ];
           
         if (!allowedCategories.includes(category)) {
-            console.log("Invalid category:", category); // Log invalid category
             return res.redirect("/"); // Redirect to home if category is invalid
         }
 
@@ -105,7 +104,6 @@ app.get("/category/:category", async (req, res) => {
             ...(search&&{ title: { $regex: search, $options: "i" } }) // Case-insensitive partial match for title
         };
 
-        console.log("Query Object:", query); // Debug the query object
 
         // Fetch movies based on the query
         const movies=await Posts.find(query)
@@ -117,7 +115,6 @@ app.get("/category/:category", async (req, res) => {
         const totalMovies=await Posts.countDocuments(query);
         const totalPages=Math.ceil(totalMovies/limit);
 
-        console.log(`Fetched ${movies.length} movies, Total Pages: ${totalPages}`); // Debug pagination details
 
         // Render the home page with fetched data
         res.render("home.ejs", {

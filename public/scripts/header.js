@@ -106,6 +106,11 @@ const saveMessage = async (e) => {
     name.value = "";
     email.value = "";
     message.value = "";
-}
+};
+
+function handleImageError(img) {
+    img.onerror = null; // Prevent infinite loop
+    img.src = '/images/loader.gif'; // Adjusted path
+  }
 
 

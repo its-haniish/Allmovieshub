@@ -1,10 +1,3 @@
-<script>
-  function handleImageError(img) {
-    img.onerror = null; // Prevent infinite loop
-    img.src = '/images/loader.gif'; // Adjusted path
-  }
-</script>
-
 <a href="/<%= movie.slug %>" class="movie_card">
   <figure>
     <img
