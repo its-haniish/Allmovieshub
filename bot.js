@@ -1,8 +1,8 @@
 require("dotenv").config();
 const axios = require('axios');
-const connectDB=require("./utils/connectDB");
 const puppeteer=require("puppeteer");
-const { Posts, Pages }=require("./models/Posts");
+const mongoose=require("mongoose");
+const { Posts, Pages }=require("./models/BotPosts.js");
 const path = require('path');
 const fs = require("fs");
 const SITE="https://allmovieshub.team/";
@@ -234,12 +234,12 @@ const main=async () => {
     }
 };
 
-// Connect to MongoDB
-connectDB(process.env.LOCAL_URI)
-    .then(() => {
+    // Start the server
+    mongoose.connect(process.env.LOCAL_URI).then(() => {
+        console.log("Connected to the database.");
         console.log("Starting the scraping process... \n");
         main();
-    })
-    .catch((err) => {
-        console.error(err);
-    });
+    }).catch((err) => {
+        console.log("Error connecting to the database...");
+        console.log(err);
+    });  
