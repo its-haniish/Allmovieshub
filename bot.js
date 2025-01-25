@@ -5,7 +5,7 @@ const mongoose=require("mongoose");
 const { Posts, Pages }=require("./models/BotPosts.js");
 const path = require('path');
 const fs = require("fs");
-const SITE="https://allmovieshub.team/";
+const SITE= process.env.SITE_URL;
 
 const main=async () => {
     let browser;
@@ -197,6 +197,7 @@ const main=async () => {
                     await page.goto(SITE);  // Default URL if not found
                     await page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }); // Increase to 60 seconds
                 }
+                await scrapePage();
                 
                 const nextButton=await page.$('.nextpostslink');
                 
@@ -220,7 +221,6 @@ const main=async () => {
             }
             
             // Recursive call to continue scraping the next pageee
-            await scrapePage();
 
             
         };
