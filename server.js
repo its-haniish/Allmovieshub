@@ -25,7 +25,7 @@ app.get("/", async (req, res) => {
 
         // Fetch movies based on the query
         const movies=await Posts.find(query)
-            .sort({ uid: -1 }) // Sort by ascending ID (customize as needed)
+            .sort({ uid: 1 }) // Sort by ascending ID (customize as needed)
             .skip(skip) // Skip documents for pagination
             .limit(limit); // Limit the number of results
 
@@ -145,11 +145,8 @@ app.get("/:slug", async (req, res) => {
 });
 
 
-
-
-
 // Start the server
-mongoose.connect(process.env.MONGO_URI||"mongodb://localhost:27017/movies").then(() => {
+mongoose.connect(process.env.VPS_URI).then(() => {
     console.log("Connected to the database.");
     app.listen(PORT, () => {
         console.log(`The server is live at: http://localhost:${PORT}`);

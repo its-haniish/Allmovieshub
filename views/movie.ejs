@@ -107,19 +107,13 @@
     <hr class="movie_hr" />
     <h3 class="orange movie_heading3">Screenshots: "See Before Downloading"</h3>
     <hr class="movie_hr" />
-    <% if (movie.image !== "Image not found.") { %>
-     <img class="white" src="<%= movie.image %>"
+
+     <img class="white" src="https://allmovieshub.live/images/image/<%= movie.slug %>.jpg"
             alt="<%= movie.keywords.join(" , ") %>"
             loading="lazy"
             onerror="handleImageError(this)"
             >
-        <% } else { %><img class="white"
-            src="<%= movie.featuredImage %>"
-            alt="<%= movie.keywords.join(" , ") %>"
-            loading="lazy"
-            onerror="handleImageError(this)"
-            >
-    <% } %>
+        
     <h2 id="movie_heading2">
         <%= movie.title %>| Allmovieshub
     </h2>
