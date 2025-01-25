@@ -12,6 +12,7 @@ const main=async () => {
     try {
         browser=await puppeteer.launch({
             headless: true,
+            executablePath: '/snap/bin/chromium', // Use the correct Chromium path here
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
