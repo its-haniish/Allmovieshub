@@ -139,7 +139,7 @@ const main=async () => {
                     const existingPost=await Posts.findOne({ title: postDetails.title });
                     if (existingPost) {
 
-                        console.log(`Post already exists: ${post.title} `);
+                        console.log(`Post already exists: ${post.title} \n`);
 
                         // await Posts.findOneAndUpdate(
                         //     { title: postDetails.title }, // Find the post by title
@@ -151,9 +151,9 @@ const main=async () => {
                         // );
 
                         // update all the fields
-                        await Posts.findOneAndUpdate({ title: postDetails.title }, postDetails, { upsert: true, new: true });
+                        // await Posts.findOneAndUpdate({ title: postDetails.title }, postDetails, { upsert: true, new: true });
 
-                        console.log(`Post updated. \n`);
+                        // console.log(`Post updated. \n`);
                         // const updatedPost=await Posts.findOne({ title: postDetails.title });
                         // console.log(updatedPost.categories, "\n");
 
