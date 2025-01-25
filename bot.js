@@ -198,7 +198,6 @@ const main=async () => {
                     await page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }); // Increase to 60 seconds
                 }
                 
-                await scrapePage();
                 const nextButton=await page.$('.nextpostslink');
                 
                 if (nextButton) {
@@ -221,6 +220,7 @@ const main=async () => {
             }
             
             // Recursive call to continue scraping the next pageee
+            await scrapePage();
 
             
         };
