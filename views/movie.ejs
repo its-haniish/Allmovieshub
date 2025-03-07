@@ -1,152 +1,163 @@
-
-<%- include('./partials/header.ejs', {title: movie.title,keywords: movie.keywords.join(", "),description: movie.metaDesc}) %>
+<%- include('./partials/header.ejs', {title: movie.title,keywords:
+movie.keywords.join(", "),description: movie.metaDesc}) %>
 
 <div>
-<script async="async" data-cfasync="false" src="//offspringthisscarcely.com/a224aeb344eece72bf0ce9ab1fa2fe53/invoke.js"></script>
-<div id="container-a224aeb344eece72bf0ce9ab1fa2fe53"></div>
+  <script
+    async="async"
+    data-cfasync="false"
+    src="//offspringthisscarcely.com/a224aeb344eece72bf0ce9ab1fa2fe53/invoke.js"
+  ></script>
+  <div id="container-a224aeb344eece72bf0ce9ab1fa2fe53"></div>
 </div>
 
 <section id="movie_container">
-    <h1 id="movie_heading">
-        <%= movie.title %>
-    </h1>
-    <hr class="movie_hr" />
-    <p class="white movie_para"> <span class="orange">
-            <%= movie.metaDesc %>
-        </span>. We Provide <span class="aqua">Direct Download Links</span> For
-        Best Qualities And <span class="yellowgreen">Fast Download.</span> You
-        Can Contact us on Telegram For the Latest Updates. AllMoviesHub is the
-        best online platform for downloading <span class="red">
-            <%= movie.title %>
-        </span> and NetFlix Original WEB Series Complete All Episodes Available
-        in <span class="aqua">480p & 720p & 1080p qualities.</span>
-        <%= movie.synopsis %>. We provide direct <span
-            class="yellowgreen">G-Drive download</span> link for fast and secure
-        downloading. Click on the download button below and follow the steps to
-        <span class="orange">start download.</span>
-    </p>
-    <hr class="movie_hr" />
-   
-    <div>
+  <h1 id="movie_heading"><%= movie.title %></h1>
+  <hr class="movie_hr" />
+  <p class="white movie_para">
+    <span class="orange"> <%= movie.metaDesc %> </span>. We Provide
+    <span class="aqua">Direct Download Links</span> For Best Qualities And
+    <span class="yellowgreen">Fast Download.</span> You Can Contact us on
+    Telegram For the Latest Updates. AllMoviesHub is the best online platform
+    for downloading <span class="red"> <%= movie.title %> </span> and NetFlix
+    Original WEB Series Complete All Episodes Available in
+    <span class="aqua">480p & 720p & 1080p qualities.</span> <%= movie.synopsis
+    %>. We provide direct <span class="yellowgreen">G-Drive download</span> link
+    for fast and secure downloading. Click on the download button below and
+    follow the steps to
+    <span class="orange">start download.</span>
+  </p>
+  <hr class="movie_hr" />
+
+  <div>
     <script type="text/javascript">
-	atOptions = {
-		'key' : 'f4c245f8cf98fae0a3d1cdeb6e640c18',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//offspringthisscarcely.com/f4c245f8cf98fae0a3d1cdeb6e640c18/invoke.js"></script>
-    
-    </div>
+      atOptions = {
+        key: "f4c245f8cf98fae0a3d1cdeb6e640c18",
+        format: "iframe",
+        height: 90,
+        width: 728,
+        params: {},
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//offspringthisscarcely.com/f4c245f8cf98fae0a3d1cdeb6e640c18/invoke.js"
+    ></script>
+  </div>
 
-    <h2 id="movie_heading2">
-        <%= movie.title %>| Allmovieshub
-    </h2>
+  <h2 id="movie_heading2"><%= movie.title %>| Allmovieshub</h2>
 
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">IMDb Rating:</span>
-        <%= movie.imdbRating %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Release Year:</span>
-        <%= movie.releaseYear %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Genres:</span>
-        <%= movie.genres %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Quality:</span>
-        <%= movie.quality %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">File Size:</span>
-        <%= movie.fileSize %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Language:</span>
-        <%= movie.language %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Format :</span>
-        <%= movie.format %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Director :</span>
-        <%= movie.director %>
-    </p>
-    <hr class="movie_hr" />
-    <p class="white info_para"> <span class="orange">Star Cast :</span>
-        <%= movie.starCast %>
-    </p>
-    <hr class="movie_hr" />
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">IMDb Rating:</span>
+    <%= movie.imdbRating %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Release Year:</span>
+    <%= movie.releaseYear %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Genres:</span>
+    <%= movie.genres %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Quality:</span>
+    <%= movie.quality %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">File Size:</span>
+    <%= movie.fileSize %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Language:</span>
+    <%= movie.language %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Format :</span>
+    <%= movie.format %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Director :</span>
+    <%= movie.director %>
+  </p>
+  <hr class="movie_hr" />
+  <p class="white info_para">
+    <span class="orange">Star Cast :</span>
+    <%= movie.starCast %>
+  </p>
+  <hr class="movie_hr" />
 
-<div>
-
-<script type="text/javascript">
-	atOptions = {
-		'key' : '873d7f0d704aa05bcb1af655be9300da',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//offspringthisscarcely.com/873d7f0d704aa05bcb1af655be9300da/invoke.js"></script>
-
-</div>
-
-
-    <hr class="movie_hr" />
-    <h3 class="movie_para orange movie_heading3">Movie-SYNOPSIS/Story</h3>
-    <p class="white movie_para">
-        <%= movie.synopsis %>
-    </p>
-    <hr class="movie_hr" />
-    <h3 class="orange movie_heading3">Screenshots: "See Before Downloading"</h3>
-    <hr class="movie_hr" />
-
-     <img class="white" src="https://allmovieshub.live/images/image/<%= movie.slug %>.jpg"
-            alt="<%= movie.keywords.join(" , ") %>"
-            loading="lazy"
-            onerror="handleImageError(this)"
-            >
-        
-    <h2 id="movie_heading2">
-        <%= movie.title %>| Allmovieshub
-    </h2>
-    <p class="white movie_para"> Click on the Above Download Button to Download
-        File. Please Contact Us if any link is Broken or file is Missing. We
-        Will fix it Immediately. </p>
-    <hr class="movie_hr" />
-    <div>
+  <div>
     <script type="text/javascript">
-	atOptions = {
-		'key' : '9d12847802f72d01b0cfbdee18685fa3',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//offspringthisscarcely.com/9d12847802f72d01b0cfbdee18685fa3/invoke.js"></script>
-</div>
+      atOptions = {
+        key: "873d7f0d704aa05bcb1af655be9300da",
+        format: "iframe",
+        height: 250,
+        width: 300,
+        params: {},
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//offspringthisscarcely.com/873d7f0d704aa05bcb1af655be9300da/invoke.js"
+    ></script>
+  </div>
 
-<h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
-<% movie.downloadLinks.forEach((elem) => { %>   
-    <% if (elem.type !== ": DOWNLOAD LINKS IN HINDI:") { %>
-        <a class="download_link" target="_blank" href="<%= elem.link  %>">
-            <%= elem.type %>
-        </a>
-    <% } %>
-<% }) %>
+  <hr class="movie_hr" />
+  <h3 class="movie_para orange movie_heading3">Movie-SYNOPSIS/Story</h3>
+  <p class="white movie_para"><%= movie.synopsis %></p>
+  <hr class="movie_hr" />
+  <h3 class="orange movie_heading3">Screenshots: "See Before Downloading"</h3>
+  <hr class="movie_hr" />
 
-    <hr class="movie_hr" />
-    <p class="post_views"> <i class="fa-solid fa-signal"></i> Post Views:
-        <%= movie.postViews %>
-    </p>
-    <hr class="movie_hr" />
+  <img class="white" src="https://allmovieshub.live/images/image/<%= movie.slug
+  %>.jpg" alt="<%= movie.keywords.join(" , ") %>" loading="lazy"
+  onerror="handleImageError(this)" >
+
+  <h2 id="movie_heading2"><%= movie.title %>| Allmovieshub</h2>
+  <p class="white movie_para">
+    Click on the Above Download Button to Download File. Please Contact Us if
+    any link is Broken or file is Missing. We Will fix it Immediately.
+  </p>
+  <hr class="movie_hr" />
+  <div>
+    <script type="text/javascript">
+      atOptions = {
+        key: "9d12847802f72d01b0cfbdee18685fa3",
+        format: "iframe",
+        height: 50,
+        width: 320,
+        params: {},
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//offspringthisscarcely.com/9d12847802f72d01b0cfbdee18685fa3/invoke.js"
+    ></script>
+  </div>
+
+  <h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
+  <% movie.downloadLinks.forEach((elem) => { %> <% if (elem.type !== ": DOWNLOAD
+  LINKS IN HINDI:") { %>
+  <a
+    class="download_link"
+    target="_blank"
+    href="https://offspringthisscarcely.com/f2hzqz837i?key=0c7d11d4e7eb7b38a83d1c36f742341d"
+  >
+    <%= elem.type %>
+  </a>
+  <% } %> <% }) %>
+
+  <hr class="movie_hr" />
+  <p class="post_views">
+    <i class="fa-solid fa-signal"></i> Post Views: <%= movie.postViews %>
+  </p>
+  <hr class="movie_hr" />
 </section>
 <%- include('./partials/footer.ejs') %>
