@@ -2,11 +2,7 @@
 movie.keywords.join(", "),description: movie.metaDesc}) %>
 
 <div>
-  <script
-    async="async"
-    data-cfasync="false"
-    src="//offspringthisscarcely.com/a224aeb344eece72bf0ce9ab1fa2fe53/invoke.js"
-  ></script>
+  <script async="async" data-cfasync="false" src="//offspringthisscarcely.com/a224aeb344eece72bf0ce9ab1fa2fe53/invoke.js"></script>
   <div id="container-a224aeb344eece72bf0ce9ab1fa2fe53"></div>
 </div>
 
@@ -38,10 +34,7 @@ movie.keywords.join(", "),description: movie.metaDesc}) %>
         params: {},
       };
     </script>
-    <script
-      type="text/javascript"
-      src="//offspringthisscarcely.com/f4c245f8cf98fae0a3d1cdeb6e640c18/invoke.js"
-    ></script>
+    <script type="text/javascript" src="//offspringthisscarcely.com/f4c245f8cf98fae0a3d1cdeb6e640c18/invoke.js"></script>
   </div>
 
   <h2 id="movie_heading2"><%= movie.title %>| Allmovieshub</h2>
@@ -103,10 +96,7 @@ movie.keywords.join(", "),description: movie.metaDesc}) %>
         params: {},
       };
     </script>
-    <script
-      type="text/javascript"
-      src="//offspringthisscarcely.com/873d7f0d704aa05bcb1af655be9300da/invoke.js"
-    ></script>
+    <script type="text/javascript" src="//offspringthisscarcely.com/873d7f0d704aa05bcb1af655be9300da/invoke.js"></script>
   </div>
 
   <hr class="movie_hr" />
@@ -116,9 +106,8 @@ movie.keywords.join(", "),description: movie.metaDesc}) %>
   <h3 class="orange movie_heading3">Screenshots: "See Before Downloading"</h3>
   <hr class="movie_hr" />
 
-  <img class="white" src="https://allmovieshub.live/images/image/<%= movie.slug
-  %>.jpg" alt="<%= movie.keywords.join(" , ") %>" loading="lazy"
-  onerror="handleImageError(this)" >
+  <img class="white" src="/movies/image/<%= movie.slug %>.jpg" alt="<%=
+  movie.keywords.join(" , ") %>" loading="lazy" onerror="handleImageError(this)">
 
   <h2 id="movie_heading2"><%= movie.title %>| Allmovieshub</h2>
   <p class="white movie_para">
@@ -136,20 +125,12 @@ movie.keywords.join(", "),description: movie.metaDesc}) %>
         params: {},
       };
     </script>
-    <script
-      type="text/javascript"
-      src="//offspringthisscarcely.com/9d12847802f72d01b0cfbdee18685fa3/invoke.js"
-    ></script>
+    <script type="text/javascript" src="//offspringthisscarcely.com/9d12847802f72d01b0cfbdee18685fa3/invoke.js"></script>
   </div>
 
   <h3 id="download_label">&#8595;&#8595; DOWNLOAD LINKS &#8595;&#8595;</h3>
-  <% movie.downloadLinks.forEach((elem) => { %> <% if (elem.type !== ": DOWNLOAD
-  LINKS IN HINDI:") { %>
-  <a
-    class="download_link"
-    target="_blank"
-    href="https://offspringthisscarcely.com/f2hzqz837i?key=0c7d11d4e7eb7b38a83d1c36f742341d"
-  >
+  <% movie.downloadLinks.forEach((elem) => { %> <% if (elem.type !== ": DOWNLOAD LINKS IN HINDI:") { %>
+  <a class="download_link" target="_blank" href="https://www.allmoviehub.me">
     <%= elem.type %>
   </a>
   <% } %> <% }) %>

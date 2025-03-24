@@ -51,16 +51,16 @@ app.get("/contact", (req, res) => {
 // Route to handle form submission
 app.post("/contact", async (req, res) => {
     try {
-        const { name, email, message } = req.body;
+        const { name, email, message }=req.body;
         await Msgs.create({ name, email, message });
-        res.status(201).json({msg:"Message sent successfully."});
+        res.status(201).json({ msg: "Message sent successfully." });
         return;
     } catch (error) {
         console.error("Error sending message:", error);
-        res.status(500).json({msg:"Server Internal Error."});
+        res.status(500).json({ msg: "Server Internal Error." });
     }
 
-  });
+});
 
 
 
@@ -73,27 +73,27 @@ app.get("/category/:category", async (req, res) => {
         const { category }=req.params; // Get category from the URL parameter
 
         // Validate and map allowed categories
-        const allowedCategories = [
-            "amzn-prime-video", 
-            "disney-hotstar", 
-            "sony-live", 
-            "zee5", 
-            "jiocinema", 
-            "hoichoi", 
-            "alt", 
-            "bengali", 
-            "gujarati", 
-            "punjabi", 
-            "marathi", 
-            "hindi-dubbed-movies", 
-            "hollywood-hindi-dubbed", 
-            "south-hindi-dubbed", 
-            "bollywood-movies", 
+        const allowedCategories=[
+            "amzn-prime-video",
+            "disney-hotstar",
+            "sony-live",
+            "zee5",
+            "jiocinema",
+            "hoichoi",
+            "alt",
+            "bengali",
+            "gujarati",
+            "punjabi",
+            "marathi",
+            "hindi-dubbed-movies",
+            "hollywood-hindi-dubbed",
+            "south-hindi-dubbed",
+            "bollywood-movies",
             "web-series",
             "dual-audio-movies",
             "netflix"
-          ];
-          
+        ];
+
         if (!allowedCategories.includes(category)) {
             return res.redirect("/"); // Redirect to home if category is invalid
         }
@@ -146,7 +146,7 @@ app.get("/:slug", async (req, res) => {
 
 
 // Start the server
-mongoose.connect(process.env.VPS_URI).then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Connected to the database.");
     app.listen(PORT, () => {
         console.log(`The server is live at: http://localhost:${PORT}`);
