@@ -24,7 +24,6 @@ const hideAsideMenu=() => {
     menu.style.display="none"
 }
 
-const search_input_1=document.getElementById('search_input_1');
 const search_input_2=document.getElementById('search_input_2');
 const headerSearch=document.getElementById('header_search');
 
@@ -43,6 +42,7 @@ headerSearch.addEventListener('keypress', async (e) => {
 });
 
 // Listen for the Enter keypress event
+const search_input_1=document.getElementById('search_input_1');
 search_input_1.addEventListener('keypress', async (e) => {
     if (e.key==='Enter') { // Check if Enter key is pressed
         const query=search_input_1.value.trim(); // Get the search query
